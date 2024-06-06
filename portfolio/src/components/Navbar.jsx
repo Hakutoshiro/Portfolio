@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Icon from '../assets/favicon-32x32.png';
 
 export default function Navabar() {
@@ -9,13 +10,13 @@ export default function Navabar() {
                     Ayush Doshi</div>
                 <div className="px-4 py-3 text-lg flex w-1/3 justify-around items-center relative">
                     <button className='hover:bg-blue-900 hover:bg-opacity-30 px-4 py-2 rounded-xl ease-in-out hover:text-secondary'>
-                        <a href="/" className="">About</a>
+                        <Link to={"/"} >About</Link>
                     </button>
                     <button className='hover:bg-blue-900 hover:bg-opacity-30 px-4 py-2 rounded-xl ease-in-out hover:text-secondary'>
-                        <a href="/project" className="">Projects</a>
+                        <Link to={"/project"} >Projects</Link>
                     </button>
                     <button className='hover:bg-blue-900 hover:bg-opacity-30 px-4 py-2 rounded-xl ease-in-out hover:text-secondary'>
-                        <a href="/resume" className="">Resume</a>
+                        <Link to={"/resume"} >Resume</Link>
                     </button>
                 </div>
             </div>
