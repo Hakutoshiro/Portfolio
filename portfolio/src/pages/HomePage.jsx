@@ -20,7 +20,7 @@ export default function HomePage() {
 
     return (
 
-        <div className={"h-auto w-full  " + bgColor}>
+        <div className={"h-auto w-full min-h-screen  " + bgColor}>
             <div className="w-7/12 mx-auto">
                 <Navabar />
             </div>
