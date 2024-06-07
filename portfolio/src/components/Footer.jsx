@@ -1,6 +1,16 @@
+import { useContext,useState,useEffect } from 'react';
+import { ThemeContext } from '../sharedContext/ThemeContext';
 export default function Footer() {
+    const { theme } = useContext(ThemeContext);
+    const [bgColor, setBgColor] = useState(theme ? "bg-white" : "bg-black");
+    const [textColor, setTextColor] = useState(theme ? "text-black" : "text-white");
+
+    useEffect(() => {
+        setBgColor(theme ? "bg-white" : "bg-black")
+        setTextColor(theme ? "text-black" : "text-white")
+    }, [theme])
     return (
-        <div className=" bg-backgroundColor h-auto flex flex-col justify-center items-center text-white mb-20 w-11/12 mx-auto">
+        <div className={textColor+ "  h-auto flex flex-col justify-center items-center  pb-20 w-11/12 mx-auto" +bgColor}>
             <h1 className=" px-4 w-full text-2xl font-mono text-primary ml-20 pb-3 pt-12 font-bold">Contact me:</h1>
             <ul className="flex justify-around w-full items-center">
                 <li>

@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body {
-  @apply bg-backgroundColor w-full h-screen md:w-7/12  mx-auto ;
+  @apply   h-screen   mx-auto ;
 }
