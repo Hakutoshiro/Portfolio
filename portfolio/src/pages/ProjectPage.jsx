@@ -14,7 +14,7 @@ export default function ProjectPage() {
         setTextColor(theme ? "text-black" : "text-white")
     }, [theme])
     return (
-        <div className={"h-auto w-full  " + bgColor}>
+        <div className={"h-auto min-h-screen w-full  " + bgColor}>
             <div className="w-7/12 mx-auto">
 
                 <Navabar />
