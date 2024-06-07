@@ -24,7 +24,7 @@ export default function ProjectPage() {
                 <div className="flex flex-wrap w-11/12 h-auto ml-20">
                     
                     {Projects.map((project, index) => {
-                        return <ProjectCard project={project} key={index} />
+                        return <ProjectCard project={project} key={index} bgColor = {bgColor} textColor ={textColor} />
                     })}
 
                 </div>

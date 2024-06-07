@@ -27,7 +27,7 @@ export const Projects = [
         ,techStack:["ReactJS","NodeJS","ExpressJS","MongoDB"],
         github:"https://github.com/Hakutoshiro/TodboT",
         preview: "https://github.com/Hakutoshiro/TodboT",
-        img : "TodboT",
+        img : "https://res.cloudinary.com/dhtz6gxni/image/upload/v1717780597/Images/Todbot_rytczn.png",
         platform : "Web"
     },
     {
