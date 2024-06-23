@@ -10,7 +10,7 @@ export default function Skill({textColor} ) {
                     return (
                         <div className="py-4" key={index}>
                             <h4 className="text-xl font-mono text-primary pb-3 ">{skill[0] }</h4>
-                            <ul className={"font-mono w-5/6 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 " + textColor}>
+                            <ul className={"font-mono w-5/6 mx-auto grid grid-cols-2 lg:grid-cols-4 " + textColor}>
                                 {
                                     skill.map((skilli, ind) => {
                                         if(ind !== 0)

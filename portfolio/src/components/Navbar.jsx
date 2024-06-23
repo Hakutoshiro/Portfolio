@@ -22,7 +22,7 @@ export default function Navabar() {
                         Ayush Doshi</div>
 
 
-                    <div className="px-4 py-3  text-lg  w-1/3  relative mx-16 hidden sm:flex items-center sm:justify-center">
+                    <div className="px-4 py-3  text-lg  w-1/3  relative mx-16 hidden md:flex items-center md:justify-center">
 
 
                         <button className='hover:bg-blue-900 hover:bg-opacity-30 px-4 py-2 rounded-xl ease-in-out hover:text-secondary'>
@@ -55,7 +55,7 @@ export default function Navabar() {
                                 </button>
                             )
                         }
-                        <button className="text-primary hover:bg-blue-900 hover:bg-opacity-30 px-3 py-3 sm:hidden rounded-full ease-in-out hover:text-secondary" onClick={e => toggleMenu(!menu)}>
+                        <button className="text-primary hover:bg-blue-900 hover:bg-opacity-30 px-3 py-3 md:hidden rounded-full ease-in-out hover:text-secondary" onClick={e => toggleMenu(!menu)}>
                             {
                                 !menu && (
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
@@ -76,7 +76,7 @@ export default function Navabar() {
                 {
                     menu && (
                         <div className="w-full flex justify-end">
-                            <div className={textColor + " min-h-screen w-10/12  flex flex-col items-end sm:hidden" + bgColor} >
+                            <div className={textColor + " min-h-screen w-10/12  flex flex-col items-end md:hidden" + bgColor} >
                                 <Link to={"/"}
                                     className='px-6 py-4 '>
                                     <button onClick={e => toggleMenu(false)}>
