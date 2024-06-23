@@ -20,7 +20,7 @@ export default function HomePage() {
 
         <div className={"h-auto w-full min-h-screen  " + bgColor}>
             
-            <div className="w-full lg:w-8/12 max-w-[700px] mx-auto h-full  flex flex-col text-xl">
+            <div className="w-full md:w-8/12 max-w-[700px] mx-auto h-full  flex flex-col text-xl">
                 <About textColor={textColor} />
                 <Skill textColor={textColor}  />
                 <Education textColor={textColor} />
