@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      screens:{
+        'tablet' : '640px',
+      },
       colors: {
         primary: "#3a86ff",
         secondary: "#408dff",

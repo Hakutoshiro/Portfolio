@@ -1,5 +1,3 @@
-import Footer from "../components/Footer";
-import Navabar from "../components/Navbar";
 import { ThemeContext } from "../sharedContext/ThemeContext";
 import { useContext, useEffect, useState } from "react";
 import {Projects} from "../data/project";
@@ -14,14 +12,11 @@ export default function ProjectPage() {
         setTextColor(theme ? "text-black" : "text-white")
     }, [theme])
     return (
-        <div className={"h-auto min-h-screen w-full  " + bgColor}>
-            <div className="w-7/12 mx-auto">
-
-                <Navabar />
-            </div>
-            <div className="w-7/12 mx-auto h-full pt-14 flex flex-col text-6xl">
-                <h1 className="font-mono text-6xl mx-auto py-20 text-primary font-bold ">PROJECTS</h1>
-                <div className="flex flex-wrap w-11/12 h-auto ml-20">
+        <div className={"h-auto min-h-screen w-full text-center " + bgColor}>
+            <h1 className="font-mono text-6xl mx-auto py-24 text-primary font-bold ">PROJECTS</h1>
+            
+            <div className="md:w-8/12 mx-auto h-full  text-6xl">
+                <div className="w-full h-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                     
                     {Projects.map((project, index) => {
                         return <ProjectCard project={project} key={index} bgColor = {bgColor} textColor ={textColor} />
@@ -29,10 +24,7 @@ export default function ProjectPage() {
 
                 </div>
             </div>
-            <div className="w-7/12 h-full mx-auto">
-
-                <Footer />
-            </div>
+            
         </div>
     )
 }

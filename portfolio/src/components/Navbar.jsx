@@ -5,22 +5,37 @@ import { ThemeContext } from '../sharedContext/ThemeContext';
 
 export default function Navabar() {
     const { theme, toggleTheme } = useContext(ThemeContext);
+    const [menu, toggleMenu] = useState(false)
     const [bgColor, setBgColor] = useState(theme ? "bg-white" : "bg-black");
-
+    const [textColor, setTextColor] = useState(theme ? "text-black" : "text-white");
     useEffect(() => {
         setBgColor(theme ? "bg-white" : "bg-black")
+        setTextColor(theme ? "text-black" : "text-white")
     }, [theme])
     return (
 
-        <div className="w-full">
-            <div className={'w-7/12 fixed  bg-opacity-90 flex items-center mx-auto ' + bgColor}>
-                <div className="flex justify-between font-mono text-primary h-14  items-center w-11/12 mx-auto" >
-                    <div className="px-4 py-3 text-2xl  flex items-center relative">
+        <div className={"w-full fixed "+bgColor}>
+            <div className={'w-full lg:w-9/12 max-w-[930px]   mx-auto ' + bgColor}>
+                <div className="flex justify-between font-mono text-primary h-14  items-center min-w-full" >
+                    <div className="px-4 py-3 text-2xl  flex items-center ">
                         <img src={Icon} className=" px-2 " />
                         Ayush Doshi</div>
 
-                    <div className="px-4 py-3  text-lg flex w-1/3 justify-around items-center relative mx-16">
 
+                    <div className="px-4 py-3  text-lg  w-1/3  relative mx-16 hidden sm:flex items-center sm:justify-center">
+
+
+                        <button className='hover:bg-blue-900 hover:bg-opacity-30 px-4 py-2 rounded-xl ease-in-out hover:text-secondary'>
+                            <Link to={"/"} >About</Link>
+                        </button>
+                        <button className='hover:bg-blue-900 hover:bg-opacity-30 px-4 py-2 rounded-xl ease-in-out hover:text-secondary'>
+                            <Link to={"/project"} >Projects</Link>
+                        </button>
+                        <button className='hover:bg-blue-900 hover:bg-opacity-30 px-4 py-2 rounded-xl ease-in-out hover:text-secondary'>
+                            <Link to={"/resume"} >Resume</Link>
+                        </button>
+                    </div>
+                    <div className="">
                         {
                             theme && (
                                 <button className=" text-primary hover:bg-blue-900 hover:bg-opacity-30 px-3 py-3 rounded-full ease-in-out hover:text-secondary " onClick={toggleTheme}>
@@ -40,19 +55,50 @@ export default function Navabar() {
                                 </button>
                             )
                         }
-
-                        <button className='hover:bg-blue-900 hover:bg-opacity-30 px-4 py-2 rounded-xl ease-in-out hover:text-secondary'>
-                            <Link to={"/"} >About</Link>
-                        </button>
-                        <button className='hover:bg-blue-900 hover:bg-opacity-30 px-4 py-2 rounded-xl ease-in-out hover:text-secondary'>
-                            <Link to={"/project"} >Projects</Link>
-                        </button>
-                        <button className='hover:bg-blue-900 hover:bg-opacity-30 px-4 py-2 rounded-xl ease-in-out hover:text-secondary'>
-                            <Link to={"/resume"} >Resume</Link>
+                        <button className="text-primary hover:bg-blue-900 hover:bg-opacity-30 px-3 py-3 sm:hidden rounded-full ease-in-out hover:text-secondary" onClick={e => toggleMenu(!menu)}>
+                            {
+                                !menu && (
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
+                                    </svg>
+                                )
+                            }{
+                                menu && (
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                    </svg>
+                                )
+                            }
                         </button>
                     </div>
-                </div>
 
+                </div>
+                {
+                    menu && (
+                        <div className="w-full flex justify-end">
+                            <div className={textColor + " min-h-screen w-10/12  flex flex-col items-end sm:hidden" + bgColor} >
+                                <Link to={"/"}
+                                    className='px-6 py-4 '>
+                                    <button onClick={e => toggleMenu(false)}>
+                                        About
+                                    </button>
+                                </Link>
+                                <Link to={"/project"}
+                                    className='px-6 py-4 '>
+                                    <button onClick={e => toggleMenu(false)}>
+                                        Projects
+                                    </button>
+                                </Link>
+                                <Link to={"/resume"}
+                                    className='px-6 py-4 '>
+                                    <button onClick={e => toggleMenu(false)}>
+                                        Resume
+                                    </button>
+                                </Link>
+                            </div>
+                        </div>
+                    )
+                }
             </div>
         </div>
     )

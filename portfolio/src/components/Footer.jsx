@@ -10,10 +10,9 @@ export default function Footer() {
         setTextColor(theme ? "text-black" : "text-white")
     }, [theme])
     return (
-        <div className={textColor+ "  h-auto flex flex-col justify-center items-center  pb-20 w-11/12 mx-auto" +bgColor}>
-            <h1 className=" px-4 w-full text-2xl font-mono text-primary ml-20 pb-3 pt-12 font-bold">Contact me:</h1>
-            <ul className="flex justify-around w-full items-center">
-                <li>
+        <div className={textColor+ "  h-auto flex flex-col justify-center items-center  pb-20 w-full mx-auto text-center " +bgColor}>
+            <h1 className=" px-4 w-full text-2xl font-mono text-primary  pb-3 pt-12 font-bold">Contact me:</h1>
+            <ul className="grid grid-cols-2 lg:grid-cols-4">
                     <button className="hover:bg-blue-900 hover:bg-opacity-30 px-4 py-2 rounded-xl ease-in-out hover:text-secondary">
 
                         <a href="https://www.linkedin.com/in/ayush-doshi-561a51233/" className="flex items-center">
@@ -26,8 +25,6 @@ export default function Footer() {
                             LinkedIn
                         </a>
                     </button>
-                </li>
-                <li>
                     <button className="hover:bg-blue-900 hover:bg-opacity-30 px-4 py-2 rounded-xl ease-in-out hover:text-secondary">
 
                         <a href="https://github.com/Hakutoshiro" className="flex items-center">
@@ -37,8 +34,6 @@ export default function Footer() {
                             @Hakutshiro
                         </a>
                     </button>
-                </li>
-                <li>
                     <button className="hover:bg-blue-900 hover:bg-opacity-30 px-4 py-2 rounded-xl ease-in-out hover:text-secondary">
 
                         <a href="https://x.com/Ayush_hkto" className="flex items-center">
@@ -48,8 +43,6 @@ export default function Footer() {
                             @Ayush_hkto
                         </a>
                     </button>
-                </li>
-                <li>
                     <button className="hover:bg-blue-900 hover:bg-opacity-30  px-6 py-2 rounded-xl ease-in-out hover:text-secondary">
 
                         <a href="mailto:ayush.doshi.dev@gmail.com" className="flex items-center">
@@ -59,7 +52,6 @@ export default function Footer() {
                             Mail
                         </a>
                     </button>
-                </li>
             </ul>
         </div>
     )

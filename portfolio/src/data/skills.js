@@ -1,8 +1,8 @@
 export const Skills = [
     ["Programming Languages","C++", "Python", "JavaScript/TypeScript", "SQL"],
-    ["Frontend","ReactJS","TailwintCSS","NextJS"],
+    ["Frontend","ReactJS","TailwintCSS","NextUI"],
     ["Backend","NodeJS","ExpressJS","Mongodb","MySQL"],
-    ["Dev-Tools/Technologies","Amazon Web Services","Git/Github","Linux"]
+    ["Dev-Tools/Technologies"," AWS","Git/Github","Linux"]
 ]
 
 
