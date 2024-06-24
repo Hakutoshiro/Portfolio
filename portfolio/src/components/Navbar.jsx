@@ -14,12 +14,13 @@ export default function Navabar() {
     }, [theme])
     return (
 
-        <div className={"w-full fixed "+bgColor}>
-            <div className={'w-full lg:w-9/12 max-w-[930px]   mx-auto ' + bgColor}>
+        <div className={"w-full  fixed text-center" + bgColor}>
+            <div className={'w-full md:w-9/12 max-w-[930px]   mx-auto ' + bgColor}>
                 <div className="flex justify-between font-mono text-primary h-14  items-center min-w-full" >
                     <div className="px-4 py-3 text-2xl  flex items-center ">
                         <img src={Icon} className=" px-2 " />
-                        Ayush Doshi</div>
+                        Ayush Doshi
+                    </div>
 
 
                     <div className="px-4 py-3  text-lg  w-1/3  relative mx-16 hidden md:flex items-center md:justify-center">
